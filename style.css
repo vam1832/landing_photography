@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.banner {
+  width: 100vw;
+  height: 100vh;
+
+  box-shadow: 0px 100px 70px -32px rgba(32, 32, 32, 0.6) inset;
+  -webkit-box-shadow: 0px 100px 70px -32px rgba(32, 32, 32, 0.6) inset;
+  -moz-box-shadow: 0px 100px 70px -32px rgba(32, 32, 32, 0.6) inset;
+
+  background-image: url("./images/mountain_1.jpg");
+  background-position: center;
+  background-size: cover;
+
+  animation: banner 20s ease-out infinite;
+  -webkit-animation: banner 20s ease-out infinite;
+  -moz-animation: banner 20s ease-out infinite;
+  -o-animation: banner 20s ease-out infinite;
+
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+@keyframes banner {
+  0%,
+  30% {
+    background-image: url(./images/mountain_1.jpg);
+  }
+  31%,
+  50% {
+    background-image: url(./images/mountain_2.jpg);
+  }
+  51%,
+  70% {
+    background-image: url(./images/mountain_3.jpg);
+  }
+  71%,
+  90% {
+    background-image: url(./images/mountain_4.jpg);
+  }
+  91%,
+  100% {
+    background-image: url(./images/mountain_5.jpg);
+  }
+}
+.navbar-container {
+  width: 85%;
+  text-rendering: optimizeLegibility;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  list-style: none;
+  padding: 12px 0;
+}
+
+.navbar a {
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  padding: 12px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: rgb(200, 194, 194);
+}
+
+.menu-button {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+
+  .navbar-container {
+    width: 100%;
+  }
+  .menu-button {
+    padding: 12px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .menu-button a img {
+    width: 32px;
+    height: 32px;
+  }
+}
