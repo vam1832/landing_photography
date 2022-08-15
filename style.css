@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-*, *::before, *::after{
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -53,12 +56,11 @@ body {
     background-image: url(./images/mountain_5.jpg);
   }
 }
-.navbar-container {
-  width: 85%;
-  text-rendering: optimizeLegibility;
-}
 
 .navbar {
+  position: absolute;
+  width: 85%;
+  min-height: 50px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -79,15 +81,28 @@ body {
   display: none;
 }
 
+.title-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(150, 239, 239);
+  text-transform: capitalize;
+  font-family: 'Pacifico', cursive;
+  letter-spacing: 2pt;
+  font-size: 24px;
+  text-align: center;
+}
+
 @media only screen and (max-width: 768px) {
   .navbar {
     display: none;
   }
 
-  .navbar-container {
-    width: 100%;
-  }
   .menu-button {
+    width: 100vw;
+    position: absolute;
     padding: 12px;
     display: flex;
     justify-content: flex-end;
